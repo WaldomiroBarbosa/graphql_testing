@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+
+</head>
+
+<body>
+    <header>
+        <ul>
+            <a href="https://unifei.edu.br/" target="_blank"><li>UNIFEI</li></a>
+            <a href="https://proex.unifei.edu.br/" target="_blank"><li>PROEX</li></a>
+            <a href="https://www.google.com/" target="_blank"><li>INTEGRA UNIFEI</li></a>
+        </ul>
+    </header>
+    <main>
+        <h1>Formulário de Apresentação de Projetos de Extensão</h1>
+        <p>Neste formulário, sua equipe deverá preencher os dados do seu projeto de extensão 
+            para que a PROEX possa distribuir os stands de forma mais adequada.</p>
+
+        <form action="/cadastro" method="post">
+
+            <fieldset>
+                <legend>Identificação do Projeto</legend>
+                <label for="proname">Nome do Projeto</label>
+                <input type="text" id="proname" name="proname" placeholder="Nome do Projeto">
+                <label for="qntmembers">Quantidade de Membros</label>
+                <input type="text" id="qntmembers" name="qntmembers" placeholder="Nº de Membros">
+                <label for="instname">Instituto de Localização</label>
+                <input type="text" id="instname" name="instname" placeholder="Nome do Instituto">
+            </fieldset>
+
+            <fieldset>
+                <legend>Área de Atuação</legend>
+                <p>Selecione apenas <b>UMA</b> opção.</p>
+                <input type="radio" name="area-tech" id="webmobile" value="webmobile">
+                <label for="webmobile">Aplicação Web/Mobile</label>
+                <input type="radio" name="area-tech" id="gamedev" value="gamedev">
+                <label for="gamedev">Desenvolvimento de Jogos</label>
+                <input type="radio" name="area-tech" id="drone" value="drone">
+                <label for="drone">Drones</label>
+                <input type="radio" name="area-tech" id="robotcomp" value="robotcomp">
+                <label for="robotcomp">Combetição de Robôs</label>
+                <input type="radio" name="area-tech" id="accoun" value="accoun">
+                <label for="accoun">Contabilidade</label>
+                <input type="radio" name="area-tech" id="meteor" value="meteor">
+                <label for="meteor">Metereologia</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Fomento</legend>
+                <label for="fom">Tipo</label>
+                <select name="fom" id="fom">
+                <option value="j">Empresa Jr</option>
+                <option value="p">Projeto de Extensão</option>
+                <option value="s">Projeto Social</option>
+                </select>
+            </fieldset>
+            <button>Enviar.</button>
+            
+        </form>
+        <footer>Feito com &#x2665 por <a href="https://github.com/WaldomiroBarbosa">Waldomiro</a> </footer>
+    </main>
+</body>
+
+</html>
