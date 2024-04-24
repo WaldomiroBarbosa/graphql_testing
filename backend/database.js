@@ -5,7 +5,7 @@ const client = new Client({
     user: "postgres",
     port: 5432,
     password: "admin",
-    database: "users1"
+    database: "graphql"
 })
 
 client.connect();
