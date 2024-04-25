@@ -27,10 +27,34 @@ app.post('/login', (req, res) => {
 })
 
 app.post('/register', (req, res) => {
-    console.log('Received POST request to /login')
+    console.log('Received POST request to /register')
     
     console.log(req.body.reg_username_post)
     console.log(req.body.reg_password_post)
+})
+
+app.post('/actone', (req, res) => {
+    console.log('Received POST request to /actone')
+    
+    value = req.body.echovalue
+
+    value = value.toUpperCase()
+    console.log(value)
+    res.send(value)
+})
+
+app.post('/actthree', (req, res) => {
+    console.log('Received POST request to /actthree')
+    
+    a = parseInt(req.body.avalue)
+    var result = a;
+    if (num === 0 || num === 1) 
+      res.send(1)
+    while (a > 1) { 
+      num--;
+      result *= num;
+    }
+    res.send(result)
 })
 
 app.all('/graphql', createHandler({schema, resolvers}))

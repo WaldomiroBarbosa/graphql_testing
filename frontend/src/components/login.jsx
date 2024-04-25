@@ -6,6 +6,7 @@ export const Login = () =>
 {
   const [log_username, setLog_username] = useState("")
   const [log_userpw, setLog_userpw] = useState("")
+  const navigateTo = useNavigate();
 
   const logUser = (e) =>
   {
@@ -15,8 +16,7 @@ export const Login = () =>
       log_username_post: log_username,
       log_password_post: log_userpw,
     }).then(response => {
-      console.log(response.data); // Exemplo de uso da resposta
-      // Aqui você pode tratar a resposta, redirecionar, etc.
+      console.log(response.data); 
     })
 
     const requestBody = {
@@ -46,6 +46,7 @@ export const Login = () =>
       return response.json();
     }).then(data => {
       console.log(data);
+      navigateTo('/userpage');
     }).catch(error => {
       console.error('Erro ao chamar a mutação signUp:', error);
     })

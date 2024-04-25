@@ -6,6 +6,7 @@ export const Register = () =>
 {
   const [reg_username, setReg_username] = useState("")
   const [reg_userpw, setReg_userpw] = useState("")
+  const navigateTo = useNavigate();
 
   const createUser = (e) =>
   {
@@ -15,8 +16,7 @@ export const Register = () =>
       reg_username_post: reg_username,
       reg_password_post: reg_userpw,
     }).then(response => {
-      console.log(response.data); // Exemplo de uso da resposta
-      // Aqui você pode tratar a resposta, redirecionar, etc.
+      console.log(response.data); 
     })
 
     const requestBody = {
@@ -47,7 +47,7 @@ export const Register = () =>
       return response.json();
     }).then(data => {
       console.log(data); // Resposta da mutação GraphQL
-      // Aqui você pode tratar a resposta, redirecionar, etc.
+      navigateTo('/userpage');
     }).catch(error => {
       console.error('Erro ao chamar a mutação signUp:', error);
     });

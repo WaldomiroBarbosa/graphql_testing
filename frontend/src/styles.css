@@ -138,3 +138,13 @@ body {
 .list li:has(input:checked) label:hover::before {
   background: hsl(200, 100%, 30%);
 }
+
+.echotext {
+  width: 300px;
+  height: 70px;
+}
+
+.smallnumber {
+  width: 46px;
+  margin: 10px;
+}
